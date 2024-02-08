@@ -2,7 +2,7 @@ package com.Staci1;
 
 public class PracticeClass {
 
-    String str = "";
+    static String str = "";
     /*Write a method called returnMost/ReturnMost that takes in a string
     and returns the character that appears the most in the string
 
@@ -34,17 +34,19 @@ public class PracticeClass {
     }
 
     public static char returnMostTwo(String str){
+
         int maxCount = 0;
         String newStr = str.toLowerCase();
-        int[] intArray = new int[256];
         char mostCommonChar = '\0';
+        int[] charCount = new int[256];
 
         for (char c : newStr.toCharArray()){
             if (Character.isLetter(c)){
-                intArray[c]++;
-                if(intArray[c]>maxCount){
-                    maxCount = intArray[c];
-                    mostCommonChar = c;
+                charCount[c]++;
+
+                if (charCount[c]>maxCount){
+                    maxCount = charCount[c];
+                    charCount[c] = mostCommonChar;
                 }
             }
         }
