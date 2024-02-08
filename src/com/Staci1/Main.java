@@ -5,11 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import static com.Staci1.PracticeClass.returnMost;
+import static com.Staci1.PracticeClass.returnMostTwo;
+
 public class Main {
 
     public static void main(String[] args) {
         //create an array - must list the length of the array
-        int[] numbers = new int[5];
+      /*  int[] numbers = new int[5];
 
         int howMany = 0;
         Scanner scanner = new Scanner(System.in);
@@ -76,9 +79,9 @@ public class Main {
         System.out.println("The sorted Array is ");
         for (int n : numberArray) {
             System.out.println(n);
-        }
+        }*/
 
-        Map<String, Integer> map = new HashMap<>();
+      /*  Map<String, Integer> map = new HashMap<>();
         //map is an interface and hashmap is our concrete class
         boolean isDone = false;
         while (!isDone) {
@@ -94,6 +97,21 @@ public class Main {
             }
             System.out.println(map);
 
-        }
+        }*/
+
+        PracticeClass practiceClass = new PracticeClass();
+        String str = "hello";
+        char mostCommonChar = returnMost(str);
+        System.out.println("The most common character is: " + mostCommonChar);
+
+        String newStr = "This is super difficult, but we won't be defeated by code";
+        char mostCommonCharTwo = returnMostTwo(newStr);
+        System.out.println("The most common character is: " + mostCommonCharTwo);
+
+
+
+
     }
+
+
 }
