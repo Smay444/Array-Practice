@@ -58,7 +58,7 @@ public class PracticeClass {
         return mostCommonChar;
     }
 
-    int[] array = {1, 2, 3, 5};
+    static int[] array = {1, 2, 3, 5};
     int k = 3;
    public static int kthBiggest (int[] array, int k){
         //find all possible pairs within the array and calculate their sums
@@ -72,11 +72,46 @@ public class PracticeClass {
                 sums.add(sum);
            }
        }
+
        sums.sort(Collections.reverseOrder()); // this will sort in ascending order
        //I need it in descending order
 
         return sums.get(k-1);
    }
+//    You are given two strings word1 and word2. Merge the strings by adding letters in alternating order,
+//    starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
+//    Return the merged string.
+    String word1 = "Staci";
+   String word2 = "May";
+    public static String mergeAlternately(String word1, String word2){
+
+        //get the character at the the first index of word 1
+        //add that to a new string
+        //get the character at the first index of word 2
+        //add that to a new string
+
+        StringBuilder sb = new StringBuilder();
+        int i = 0;
+        int j = 0;
+       while (i < word1.length() || j < word2.length()){
+           if (i < word1.length()){
+               sb.append(word1.charAt(i));
+               i++;
+           }
+           if (j < word2.length()){
+               sb.append(word2.charAt(j));
+               j++;
+           }
+
+       }
+
+        return sb.toString();
+
+
+
+
+    }
+
 
 
 }
