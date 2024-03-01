@@ -1,5 +1,9 @@
 package com.Staci1;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.*;
+
 public class PracticeClass {
 
     static String str = "";
@@ -54,6 +58,25 @@ public class PracticeClass {
         return mostCommonChar;
     }
 
+    int[] array = {1, 2, 3, 5};
+    int k = 3;
+   public static int kthBiggest (int[] array, int k){
+        //find all possible pairs within the array and calculate their sums
+       // store them in an array or list
+       // sort the array/list to get the kth biggest
+
+        List<Integer> sums = new ArrayList<>();
+       for (int i = 0; i < array.length; i++) {
+           for (int j = i+1; j < array.length; j++) {
+                int sum = array[i] + array[j];
+                sums.add(sum);
+           }
+       }
+       sums.sort(Collections.reverseOrder()); // this will sort in ascending order
+       //I need it in descending order
+
+        return sums.get(k-1);
+   }
 
 
 }

@@ -100,15 +100,18 @@ public class Main {
         }*/
 
         PracticeClass practiceClass = new PracticeClass();
-        String str = "hello";
-        char mostCommonChar = returnMost(str);
-        System.out.println("The most common character is: " + mostCommonChar);
+//        String str = "hello";
+//        char mostCommonChar = returnMost(str);
+//        System.out.println("The most common character is: " + mostCommonChar);
+//
+//        String newStr = "This is super difficult, but we won't be defeated by code";
+//        char mostCommonCharTwo = returnMostTwo(newStr);
+//        System.out.println("The most common character is: " + mostCommonCharTwo);
 
-        String newStr = "This is super difficult, but we won't be defeated by code";
-        char mostCommonCharTwo = returnMostTwo(newStr);
-        System.out.println("The most common character is: " + mostCommonCharTwo);
-
-
+        int[] array = {1,2,3,4};
+        // 1+2, 1+3, 1+4, 2+3, 2+4, 3+4
+        int k = 3;
+        System.out.println("The " + k + "th value is: " + practiceClass.kthBiggest(array, k));
 
 
     }
